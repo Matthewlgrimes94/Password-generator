@@ -1,5 +1,17 @@
+
+
 var length = 20;
-var pswrdArr = [];
+var useArr = [];
+
+var includeLower = document.getElementById("lowerCheck");
+var includeUpper = document.getElementById("upperCheck");
+var includeNumber = document.getElementById("numbersCheck");
+var includeSymbol = document.getElementById("symbolsCheck");
+var generate = document.getElementById("generate");
+var useLower = false;
+var useUpper = false;
+var useNumber = false;
+var useSymbol = false;
 
 // Generation using the UTF-8 character set, and an array for symbols //
 function genLower () {
@@ -18,13 +30,51 @@ function genSymbol () {
     var symbolsArray = ["!","@","#","$","%","^","&","*"];
     return symbolsArray[Math.floor(Math.random()*8)];
 }
-// Push randomly generated values into the password array
-for (var i = 0; i < (length/4); i++) {
-    pswrdArr.push(genLower());
-    pswrdArr.push(genUpper());
-    pswrdArr.push(genNumber());
-    pswrdArr.push(genSymbol());
-}
+
+// Listens for a click on the Generate button
+generate.addEventListener("click", () => {
+	// Checks to see which boxes have been checked
+	var useLower = includeLower.checked;
+	var useUpper = includeUpper.checked;
+	var useNumber = includeNumber.checked;
+	var useSymbol = includeSymbol.checked;
+	//logs which have been checked
+	console.log(useLower, useUpper, useNumber, useSymbol);
+	//Places the boolean value of the checkboxes into an array, and filters out any that are "false"
+	var useArr = [useLower, useUpper, useNumber, useSymbol].filter(Boolean);
+	//Adds up true values to use in the password generator
+	var charactersAdded = (useArr.length);
+	//An array to hold the generated characters
+	var passwordArr = [];
+
+	generatePassword();
+	// A for loop, that places charaters into the password array, based on which boxes have been checked
+	// It uses charactersAdded to determine how many characters are in the new array
+	function generatePassword() {
+		for (i = 0; i < length; i += charactersAdded) {
+			if (useLower === true) {
+				passwordArr.push(genLower());
+			} if (useUpper === true) {
+				passwordArr.push(genUpper());
+			} if (useNumber === true) {
+				passwordArr.push(genNumber());
+			} if (useSymbol === true) {
+				passwordArr.push(genSymbol());
+			}
+		}
+	} 	//we can see what the password looks like before it is scrambled
+		console.log(passwordArr);
+		// Shuffle the generated array
+		var pswrdShuffle = shuffle(passwordArr);
+		// If desired password length is less that 4, slice the array to the correct size
+		var pswrdSlice = pswrdShuffle.slice(0,length);
+		// convert the array to a single string
+		var password = pswrdSlice.join("");
+		console.log(password);
+
+});
+
+
 
 // Fisher-Yates Shuffle Algorithm
 var shuffle = function (array) {
@@ -47,13 +97,3 @@ var shuffle = function (array) {
 	return array;
 
 };
-
-// Shuffle the generated array
-var pswrdShuffle = shuffle(pswrdArr);
-// If desired password length is less that 4, slice the array to the correct size
-var pswrdSlice = pswrdShuffle.slice(0,length);
-// convert the array to a single string
-var pswrdprimer = pswrdSlice.join("");
-
-
-console.log(pswrdprimer);
