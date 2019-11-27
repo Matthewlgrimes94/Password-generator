@@ -15,12 +15,13 @@
           <div class="row justify-content-center">
               <div class="col">
                 <div class="form-holder ml-auto">
-                  <input type="number" name="length" value="0" id="length"> How long do you want your password?<br>
-                  <input type="checkbox" name="lower" value="1" id="lowerCheck"> Include Lowercase Letters?<br>
-                  <input type="checkbox" name="upper" value="1" id="upperCheck"> Include Uppercase Letters?<br>
-                  <input type="checkbox" name="numbers" value="1" id="numbersCheck"> Include Numbers?<br>
-                  <input type="checkbox" name="symbols" value="1" id="symbolsCheck"> Include Symbols?<br>
-                  <button id="generate"></button>
+                  <p id="passwordOutput"></p><br>
+                  <input type="number" min="0" max="250" name="length" value="5" id="length"> How long do you want your password?<br>
+                  <input type="checkbox" name="lower" value="1" id="lowerCheck" checked> Include Lowercase Letters?<br>
+                  <input type="checkbox" name="upper" value="1" id="upperCheck" checked> Include Uppercase Letters?<br>
+                  <input type="checkbox" name="numbers" value="1" id="numbersCheck" checked> Include Numbers?<br>
+                  <input type="checkbox" name="symbols" value="1" id="symbolsCheck" checked> Include Symbols?<br>
+                  <button id="generate"><span>Generate</span></button>
                 </div>
               </div>
           </div>

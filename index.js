@@ -1,17 +1,16 @@
-
-
-var length = 20;
+//intialize variables, and grab DOM elements
+var output = document.getElementById("passwordOutput");
+var length = document.getElementById("length");
 var useArr = [];
-
 var includeLower = document.getElementById("lowerCheck");
 var includeUpper = document.getElementById("upperCheck");
 var includeNumber = document.getElementById("numbersCheck");
 var includeSymbol = document.getElementById("symbolsCheck");
 var generate = document.getElementById("generate");
-var useLower = false;
-var useUpper = false;
-var useNumber = false;
-var useSymbol = false;
+var useLower = true;
+var useUpper = true;
+var useNumber = true;
+var useSymbol = true;
 
 // Generation using the UTF-8 character set, and an array for symbols //
 function genLower () {
@@ -38,8 +37,9 @@ generate.addEventListener("click", () => {
 	var useUpper = includeUpper.checked;
 	var useNumber = includeNumber.checked;
 	var useSymbol = includeSymbol.checked;
+	var lengthValue = length.value;
 	//logs which have been checked
-	console.log(useLower, useUpper, useNumber, useSymbol);
+	//console.log(useLower, useUpper, useNumber, useSymbol);
 	//Places the boolean value of the checkboxes into an array, and filters out any that are "false"
 	var useArr = [useLower, useUpper, useNumber, useSymbol].filter(Boolean);
 	//Adds up true values to use in the password generator
@@ -51,7 +51,7 @@ generate.addEventListener("click", () => {
 	// A for loop, that places charaters into the password array, based on which boxes have been checked
 	// It uses charactersAdded to determine how many characters are in the new array
 	function generatePassword() {
-		for (i = 0; i < length; i += charactersAdded) {
+		for (i = 0; i < lengthValue; i += charactersAdded) {
 			if (useLower === true) {
 				passwordArr.push(genLower());
 			} if (useUpper === true) {
@@ -63,14 +63,15 @@ generate.addEventListener("click", () => {
 			}
 		}
 	} 	//we can see what the password looks like before it is scrambled
-		console.log(passwordArr);
+		//console.log(passwordArr);
 		// Shuffle the generated array
 		var pswrdShuffle = shuffle(passwordArr);
 		// If desired password length is less that 4, slice the array to the correct size
-		var pswrdSlice = pswrdShuffle.slice(0,length);
+		var pswrdSlice = pswrdShuffle.slice(0,lengthValue);
 		// convert the array to a single string
 		var password = pswrdSlice.join("");
 		console.log(password);
+		output.innerText = password;
 
 });
 
