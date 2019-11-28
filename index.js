@@ -63,7 +63,6 @@ generate.addEventListener("click", () => {
 			//Checks to see if no options were selected, so your computer wont explode in that case
 			//(tried that once, can't recommend)
 			} if (useLower === false && useUpper === false && useNumber === false && useSymbol === false) {
-				alert("Please select an option");
 				return;
 			}
 		}
