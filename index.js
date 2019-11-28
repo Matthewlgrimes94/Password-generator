@@ -60,6 +60,9 @@ generate.addEventListener("click", () => {
 				passwordArr.push(genNumber());
 			} if (useSymbol === true) {
 				passwordArr.push(genSymbol());
+			} if (useLower === false && useUpper === false && useNumber === false && useSymbol === false) {
+				alert("Please select an option");
+				return;
 			}
 		}
 	} 	//we can see what the password looks like before it is scrambled
