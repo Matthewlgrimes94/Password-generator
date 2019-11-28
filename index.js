@@ -24,7 +24,7 @@ function genUpper () {
 function genNumber () {
     return String.fromCharCode(Math.floor(Math.random()*10)+48);
 }
-
+// I used an array for symbols, because the character set has some blank spaces that i didnt want to include
 function genSymbol () {
     var symbolsArray = ["!","@","#","$","%","^","&","*","/","-","+",".",";",":"];
     return symbolsArray[Math.floor(Math.random()*14)];
@@ -48,8 +48,8 @@ generate.addEventListener("click", () => {
 	var passwordArr = [];
 
 	generatePassword();
-	// A for loop, that places charaters into the password array, based on which boxes have been checked
-	// It uses charactersAdded to determine how many characters are in the new array
+	// A for loop, that places characters into the password array, based on which boxes have been checked
+	// It uses charactersAdded to determine how many characters are being added to the the new array
 	function generatePassword() {
 		for (i = 0; i < lengthValue; i += charactersAdded) {
 			if (useLower === true) {
@@ -60,6 +60,8 @@ generate.addEventListener("click", () => {
 				passwordArr.push(genNumber());
 			} if (useSymbol === true) {
 				passwordArr.push(genSymbol());
+			//Checks to see if no options were selected, so your computer wont explode in that case
+			//(tried that once, can't recommend)
 			} if (useLower === false && useUpper === false && useNumber === false && useSymbol === false) {
 				alert("Please select an option");
 				return;
