@@ -1,4 +1,43 @@
+body {
+    background-color: #dfcdc3!important;
+}
 .form-holder {
     width: 40%;
     height: 100%;
+}
+span {
+    color: #dfcdc3;
+}
+input {
+    float: right;
+    width: 12%;
+}
+
+p {
+    background-color: white;
+    text-align: center;
+    width: 85%;
+}
+
+.form-holder {
+    background-color:#5f6769;
+    border: 5px, #3c4245;
+    box-shadow: 15px, 10px, #3c4245 !important;
+}
+
+#generate {
+    border-radius: 4px;
+    background-color: #dfcdc3;
+    border-color: #3c4245;
+}
+
+#generate span {
+    color: #3c4245;
+}
+
+#clipboard {
+    width: 30px;
+    height: 30px;
+    background-color: #dfcdc3;
+    border-color: #3c4245;
 }

@@ -26,8 +26,8 @@ function genNumber () {
 }
 
 function genSymbol () {
-    var symbolsArray = ["!","@","#","$","%","^","&","*"];
-    return symbolsArray[Math.floor(Math.random()*8)];
+    var symbolsArray = ["!","@","#","$","%","^","&","*","/","-","+",".",";",":"];
+    return symbolsArray[Math.floor(Math.random()*14)];
 }
 
 // Listens for a click on the Generate button
