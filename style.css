@@ -1,12 +1,16 @@
+html {
+    font-family: 'Lato', sans-serif !important;
+}
+
 body {
-    background-color: #dfcdc3!important;
+    background-color: white !important;
 }
 .form-holder {
     width: 40%;
     height: 100%;
 }
 span {
-    color: #dfcdc3;
+    color: white;
 }
 input {
     float: right;
@@ -20,15 +24,15 @@ p {
 }
 
 .form-holder {
-    background-color:#5f6769;
-    border: 5px, #3c4245;
+    border: none;
+    background-color: #3c4245;
     box-shadow: 15px, 10px, #3c4245 !important;
 }
 
 #generate {
     border-radius: 4px;
-    background-color: #dfcdc3;
-    border-color: #3c4245;
+    background-color: white;
+    border: none;
 }
 
 #generate span {
@@ -38,6 +42,6 @@ p {
 #clipboard {
     width: 30px;
     height: 30px;
-    background-color: #dfcdc3;
-    border-color: #3c4245;
+    background-color: white;
+    border: none;
 }
