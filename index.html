@@ -5,29 +5,46 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Google Fonts-->
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/d2599b4445.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-      <div class="container text-left">
-          <div class="row justify-content-center mt-auto mb-auto">
-              <div class="col">
-                <div class="form-holder ml-auto mr-auto mt-5 p-3">
-                  <p id="passwordOutput">Password will appear here</p> <button id="clipboard"></button><br><br>
-                  <input type="number" min="0" max="250" name="length" value="5" id="length"> <span>Password Length</span><br><br>
-                  <input type="checkbox" name="lower" value="1" id="lowerCheck" checked> <span>Include Lowercase Letters?</span><br>
-                  <input type="checkbox" name="upper" value="1" id="upperCheck" checked> <span>Include Uppercase Letters?</span><br>
-                  <input type="checkbox" name="numbers" value="1" id="numbersCheck" checked> <span>Include Numbers?</span><br>
-                  <input type="checkbox" name="symbols" value="1" id="symbolsCheck" checked> <span>Include Symbols?</span><br><br>
-                  <button id="generate"><span>Generate</span></button>
-                </div>
-              </div>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-sm-12 col-md-10 p-0">
+            <div class="border border-secondary pl-2 m-0 mb-1">
+              <p id="passwordOutput" class="m-0 text-center">Password</p>
+            </div>
           </div>
+          <div class="col-sm-12 col-md-2 p-0">
+            <button type="button" class="btn btn-sm btn-primary big mb-1"><i class="fas fa-clipboard"></i></button>
+          </div>
+        </div>
+        <div class="row text-center border border-secondary mb-2">
+          <div class="col">
+            <input type="checkbox" name="upper" id="upperCheck" checked><span>Uppercase</span>
+          </div>
+          <div class="col">
+            <input type="checkbox" name="lower" id="lowerCheck" checked><span>Lowercase</span>
+          </div>
+          <div class="col">
+            <input type="checkbox" name="number" id="numbersCheck" checked><span>Numbers</span>
+          </div>
+          <div class="col">
+            <input type="checkbox" name="symbol" id="symbolsCheck" checked><span>Symbols</span>
+          </div>
+          <div class="col">
+            <input type="number" name="length" id="length" min="0" max="25" value="5"><span>Length?</span>
+          </div>
+        </div>
+        <div class="row">
+          <button type="button" name="generate" id="generate" class="btn btn-primary btn-lg btn-block">Generate</button>
+        </div>
       </div>
     <!-- Optional JavaScript -->
     <script src="index.js"></script>

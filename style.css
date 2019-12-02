@@ -1,47 +1,11 @@
 html {
-    font-family: 'Lato', sans-serif !important;
+    font-family: 'Lato', sans-serif;
 }
 
-body {
-    background-color: white !important;
-}
-.form-holder {
-    width: 40%;
-    height: 100%;
-}
-span {
-    color: white;
-}
-input {
-    float: right;
-    width: 12%;
+.big {
+    width: 100%;
 }
 
-p {
-    background-color: white;
-    text-align: center;
-    width: 85%;
-}
-
-.form-holder {
-    border: none;
-    background-color: #3c4245;
-    box-shadow: 15px, 10px, #3c4245 !important;
-}
-
-#generate {
-    border-radius: 4px;
-    background-color: white;
-    border: none;
-}
-
-#generate span {
-    color: #3c4245;
-}
-
-#clipboard {
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border: none;
+#pswrdHolder {
+    font-size: larger;
 }
