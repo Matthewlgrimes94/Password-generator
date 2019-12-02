@@ -7,6 +7,7 @@ var includeUpper = document.getElementById("upperCheck");
 var includeNumber = document.getElementById("numbersCheck");
 var includeSymbol = document.getElementById("symbolsCheck");
 var generate = document.getElementById("generate");
+var clip = document.getElementById("clipboard");
 var useLower = true;
 var useUpper = true;
 var useNumber = true;
@@ -78,8 +79,10 @@ generate.addEventListener("click", () => {
 		output.innerText = password;
 
 });
-
-
+// Listens for clipboard click, and runs clipboard function
+clip.addEventListener("click", () => {
+	clipboard();
+ });
 
 // Fisher-Yates Shuffle Algorithm
 var shuffle = function (array) {
@@ -102,3 +105,14 @@ var shuffle = function (array) {
 	return array;
 
 };
+
+//copy to clipboard
+function clipboard () {
+	var text = output.innerText;
+	var temp = document.createElement('textarea');
+	document.body.appendChild(temp);
+	temp.value = text;
+	temp.select();
+	document.execCommand('copy');
+	document.body.removeChild(temp);
+}
