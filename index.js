@@ -13,6 +13,7 @@ var useUpper = true;
 var useNumber = true;
 var useSymbol = true;
 
+
 // Generation using the UTF-8 character set, and an array for symbols //
 function genLower () {
     return String.fromCharCode(Math.floor(Math.random()*26)+97);
@@ -34,6 +35,11 @@ function genSymbol () {
 // Listens for a click on the Generate button
 generate.addEventListener("click", () => {
 	// Checks to see which boxes have been checked
+	if (length.value > 128 || length.value < 8) {
+		alert("please enter a number between 8 and 128");
+		length.value = 8;
+		return;
+	}
 	var useLower = includeLower.checked;
 	var useUpper = includeUpper.checked;
 	var useNumber = includeNumber.checked;
