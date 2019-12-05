@@ -7,6 +7,10 @@ html {
     width: 80%;
 }
 
+p {
+    word-wrap: break-word;
+}
+/* Big password font! */
 #passwordOutput {
     font-size: x-large;
 }
