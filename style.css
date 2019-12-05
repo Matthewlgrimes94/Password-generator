@@ -1,11 +1,12 @@
+/* Google font Lato */
 html {
     font-family: 'Lato', sans-serif;
 }
-
+/* Clipboard button */
 .big {
     width: 80%;
 }
 
-#pswrdHolder {
-    font-size: larger;
+#passwordOutput {
+    font-size: x-large;
 }
