@@ -115,4 +115,4 @@ function clipboard () {
 	temp.select();
 	document.execCommand('copy');
 	document.body.removeChild(temp);
-}
+};
