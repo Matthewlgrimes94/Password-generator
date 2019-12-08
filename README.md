@@ -1,6 +1,6 @@
 # Password-generator
 
-<------------------------------------------------------------------------------------------------------------------------------------>
+<---------------------------------------------------------------------------------------------------------------------------------->
 
 # About
 
@@ -11,7 +11,7 @@ This website lets you check boxes to decide which characters to use for your pas
 ![image](https://github.com/Matthewlgrimes94/Password-generator/blob/master/assets/screenshots/Screenshot%20(7).png)
 ![image](https://github.com/Matthewlgrimes94/Password-generator/blob/master/assets/screenshots/Screenshot%20(8).png)
 ![image](https://github.com/Matthewlgrimes94/Password-generator/blob/master/assets/screenshots/Screenshot%20(9).png)
-<------------------------------------------------------------------------------------------------------------------------------------>
+<---------------------------------------------------------------------------------------------------------------------------------->
 
 # Resources
 
@@ -25,7 +25,7 @@ Resources I used, when creating this website
 The shuffle array function, is the Fisher-Yates algorithm, and does not belong to me.
 * https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
 
-<------------------------------------------------------------------------------------------------------------------------------------>
+<---------------------------------------------------------------------------------------------------------------------------------->
 
 # License
 
@@ -51,5 +51,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-<------------------------------------------------------------------------------------------------------------------------------------>
+<---------------------------------------------------------------------------------------------------------------------------------->
 
