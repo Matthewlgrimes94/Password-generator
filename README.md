@@ -8,6 +8,9 @@ This website lets you check boxes to decide which characters to use for your pas
 
 # Screenshots
 
+![image](https://github.com/Matthewlgrimes94/Password-generator/blob/master/assets/screenshots/Screenshot%20(7).png)
+![image](https://github.com/Matthewlgrimes94/Password-generator/blob/master/assets/screenshots/Screenshot%20(8).png)
+![image](https://github.com/Matthewlgrimes94/Password-generator/blob/master/assets/screenshots/Screenshot%20(9).png)
 <----------------------------------------------------------------------------------------------------------->
 
 # Resources
